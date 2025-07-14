@@ -17,21 +17,25 @@ You can install the ML4W Hyprland Starter easily with the Dotfiles Installer fro
 
 More information about the installation of the Dotfiles Installer here: https://github.com/mylinuxforwork/dotfiles-installer/wiki/01-Installation
 
-1. Copy the following url into the Dotfiles Installer.
+>1. Copy the following url into the Dotfiles Installer.
 
 ```
 https://raw.githubusercontent.com/neosanora/my_hyprland-starter/main/hyprland-starter.dotinst
 ```
 
-1. if you wonted to install it with old fasion way (manualy) not recomended!.
 
-Just copy the following command into your terminal and execute.
+>1. if you wonted to install it with old fasion way (manualy) not recomended!.
+
+    Just copy the following command into your terminal and execute.
 
 ```
 bash <(curl -s https://raw.githubusercontent.com/mylinuxforwork/hyprland-starter/main/setup.sh)
 ```
 
-Please run the setup script offered by the Dotfiles Installer to install all dependencies. If your distribution is not supported, please install the following dependencies manually:
+
+
+Please run the setup script offered by the Dotfiles Installer to install all dependencies. If your distribution is not supported,
+please install the following dependencies manually:
 
 - hyprland
 - waybar
@@ -55,6 +59,7 @@ Please run the setup script offered by the Dotfiles Installer to install all dep
 - brightnessctl
 - networkmanager
 - wireplumber
+
 
 > Hyprland does not officially support NVIDIA hardware. But many users have reported a successful installation. Please read: https://wiki.hyprland.org/Nvidia/
 
@@ -87,10 +92,57 @@ The following custom key bindings are enabled (can be customized in ~/.config/hy
 - <kbd>SUPER</kbd> + <kbd>B</kbd> to start browser
 - <kbd>SUPER</kbd> + <kbd>M</kbd> to exit Hyprland
 - <kbd>SUPER</kbd> + <kbd>E</kbd> to start filemanager
-- <kbd>SUPER</kbd></kbd> + <kbd>CTRL</kbd> + <kbd>RETURN</kbd> to start launcher rofi
+- <kbd>SUPER</kbd> + <kbd>SPACE</kbd> to start launcher rofi
 - <kbd>SUPER</kbd> + <kbd>T</kbd> to toggle floating
 - <kbd>SUPER</kbd> + <kbd>F</kbd> to toggle fullscreen
 - <kbd>SUPER</kbd> + <kbd>1-9</kbd> to switch workspaces
 - more key bindings in ~/.config/hypr/conf/binds.conf
 
 or after the installation with right mouse click on Apps in the status bar.
+
+## FAQ
+
+### Q: Kitty terminal won't start in VirtualBox, what should I do?
+
+**A:** This is a known issue when running Kitty in VirtualBox or other virtual machines, especially if GPU acceleration is limited or missing. Here are some steps you can try:
+
+1. **Set environment variable before launching Kitty:**
+
+   ```bash
+   LIBGL_ALWAYS_SOFTWARE=true GALLIUM_DRIVER=llvmpipe kitty
+   ```
+
+   This forces Kitty to use software rendering instead of GPU.
+
+2. **Install missing dependencies:**
+   
+   Make sure you have `mesa`, `libgl`, and `libx11` installed in your VM.
+
+3. **Try launching from another terminal:**
+   
+   If Kitty fails to start, open another terminal like `xterm`, `alacritty`, or `foot` and try launching Kitty from there to see error messages.
+
+4. **Check logs:**
+   
+   Run this command to see more detailed errors:
+
+   ```bash
+   kitty --debug-config
+   ```
+
+5. **Try running it under X11 instead of Wayland:**  
+   Some VM environments are more compatible with X11.
+
+---
+
+**Still not working?**
+
+If none of the above solutions work, we recommend using an alternative terminal emulator such as:
+
+- `alacritty`
+- `foot`
+- `gnome-terminal`
+- `xfce4-terminal`
+
+They are lighter and more compatible in virtual machines.
+
