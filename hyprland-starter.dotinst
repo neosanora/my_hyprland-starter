@@ -1,9 +1,9 @@
 {
-	"name": "ML4W Hyprland Starter",
-	"id": "com.ml4w.hyprlandstarter",
+	"name": "Neo Hyprland Starter",
+	"id": "Neo.hyprlandstarter",
 	"description": "Starter package for your Hyprland experiments",
-	"version":"2.0",
-	"author": "Stephan Raabe",
+	"version":"1.0",
+	"author": "Neosanora",
 	"homepage": "https://github.com/neosanora/my_hyprland-starter",
 	"dependencies": "https://github.com/neosanora/my_hyprland-starter",
 	"source": "https://github.com/neosanora/my_hyprland-starter.git",
