@@ -7,7 +7,7 @@
 
 The ML4W Hyprland Starter package is the perfect starting point for your Hyprland customization experiments. The Hyprland Starter configuration works on all Linux distributions that support the dynamic tiling window manager Hyprland.
 
-You can find configurations here: https://github.com/mylinuxforwork/hyprland-starter/tree/main/dotfiles
+You can find configurations here: https://github.com/neosanora/my_hyprland-starter/tree/main/dotfiles
 
 ## Installation
 
@@ -17,11 +17,20 @@ You can install the ML4W Hyprland Starter easily with the Dotfiles Installer fro
 
 More information about the installation of the Dotfiles Installer here: https://github.com/mylinuxforwork/dotfiles-installer/wiki/01-Installation
 
-Copy the following url into the Dotfiles Installer.
+1. Copy the following url into the Dotfiles Installer.
 
 ```
 https://raw.githubusercontent.com/neosanora/my_hyprland-starter/main/hyprland-starter.dotinst
 ```
+
+1. if you wonted to install it with old fasion way (manualy) not recomended!.
+
+Just copy the following command into your terminal and execute.
+
+```
+bash <(curl -s https://raw.githubusercontent.com/mylinuxforwork/hyprland-starter/main/setup.sh)
+```
+
 Please run the setup script offered by the Dotfiles Installer to install all dependencies. If your distribution is not supported, please install the following dependencies manually:
 
 - hyprland
