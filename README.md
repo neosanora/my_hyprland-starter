@@ -20,7 +20,7 @@ More information about the installation of the Dotfiles Installer here: https://
 Copy the following url into the Dotfiles Installer.
 
 ```
-https://raw.githubusercontent.com/mylinuxforwork/hyprland-starter/main/hyprland-starter.dotinst
+https://raw.githubusercontent.com/neosanora/my_hyprland-starter/main/hyprland-starter.dotinst
 ```
 Please run the setup script offered by the Dotfiles Installer to install all dependencies. If your distribution is not supported, please install the following dependencies manually:
 

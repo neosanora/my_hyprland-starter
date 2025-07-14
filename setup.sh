@@ -35,10 +35,11 @@ EOF
     echo ":: Distribution could not be auto detected. Please select your base distribution."
     echo 
     echo "1: Arch (pacman + aur helper)"
-    echo "2: Fedora (dnf)"
-    echo "3: OpenSuse (zypper)"
-    echo "4: Show dependencies and install manually for your distribution"
-    echo "5: Cancel"
+    echo "2: VBox for Arch (pacman + aur helper)"
+    echo "3: Fedora (dnf)"
+    echo "4: OpenSuse (zypper)"
+    echo "5: Show dependencies and install manually for your distribution"
+    echo "6: Cancel"
     echo 
     while true; do
         read -p "Plase select: " yn
@@ -48,18 +49,22 @@ EOF
                 break
                 ;;
             2)
-                $SCRIPT_DIR/setup-fedora.sh
+                $SCRIPT_DIR/VBox-setup-arch.sh
                 break
                 ;;
             3)
-                $SCRIPT_DIR/setup-opensuse.sh
+                $SCRIPT_DIR/setup-fedora.sh
                 break
                 ;;
             4)
-                $SCRIPT_DIR/dependencies.sh
+                $SCRIPT_DIR/setup-opensuse.sh
                 break
                 ;;
             5)
+                $SCRIPT_DIR/dependencies.sh
+                break
+                ;;
+            6)
                 echo ":: Installation canceled"
                 exit
                 break
@@ -78,5 +83,5 @@ elif [[ $(_checkCommandExists "dnf") == 0 ]]; then
 elif [[ $(_checkCommandExists "zypper") == 0 ]]; then
     $SCRIPT_DIR/setup-opensuse.sh
 else
-    $SCRIPT_DIR/setup-dependencies.sh
+    $SCRIPT_DIR/dependencies.sh
 fi
