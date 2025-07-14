@@ -33,9 +33,9 @@ bash <(curl -s https://raw.githubusercontent.com/mylinuxforwork/hyprland-starter
 ```
 
 
-
-Please run the setup script offered by the Dotfiles Installer to install all dependencies. If your distribution is not supported,
-please install the following dependencies manually:
+<details>
+<summary>Please run the setup script offered by the Dotfiles Installer to install all dependencies. If your distribution is not supported,
+please install the following dependencies manually:</summary>
 
 - hyprland
 - waybar
@@ -59,7 +59,7 @@ please install the following dependencies manually:
 - brightnessctl
 - networkmanager
 - wireplumber
-
+</details>
 
 > Hyprland does not officially support NVIDIA hardware. But many users have reported a successful installation. Please read: https://wiki.hyprland.org/Nvidia/
 
@@ -102,7 +102,8 @@ or after the installation with right mouse click on Apps in the status bar.
 
 ## FAQ
 
-### Q: Kitty terminal won't start in VirtualBox, what should I do?
+<details>
+<summary>Kitty terminal won't start in VirtualBox, what should I do?</summary>
 
 **A:** This is a known issue when running Kitty in VirtualBox or other virtual machines, especially if GPU acceleration is limited or missing. Here are some steps you can try:
 
@@ -145,6 +146,7 @@ If none of the above solutions work, we recommend using an alternative terminal 
 - `xfce4-terminal`
 
 They are lighter and more compatible in virtual machines.
+</details>
 
 ## 🛠️ VirtualBox Troubleshooting (FAQ)
 
