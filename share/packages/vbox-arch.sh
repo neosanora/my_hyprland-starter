@@ -1,18 +1,18 @@
 # ----------------------------------------------------------
-# Packages
+# Packages for Arch in VirtualBox
 # ----------------------------------------------------------
 
 packages=(
     "wget"
     "unzip"
     "git"
-    "gum"    
+    "gum"
     "hyprland"
     "waybar"
     "rofi-wayland"
-    "konsole"
+    "kitty"
     "dunst"
-    "dolphin"
+    "thunar"
     "xdg-desktop-portal-hyprland"
     "qt5-wayland"
     "qt6-wayland"
@@ -22,8 +22,8 @@ packages=(
     "ttf-font-awesome"
     "vim"
     "fastfetch"
-    "ttf-fira-sans" 
-    "ttf-fira-code" 
+    "ttf-fira-sans"
+    "ttf-fira-code"
     "ttf-firacode-nerd"
     "jq"
     "brightnessctl"
@@ -31,4 +31,5 @@ packages=(
     "wireplumber"
     "wlogout"
     "flatpak"
+    "virtualbox-guest-utils"
 )
