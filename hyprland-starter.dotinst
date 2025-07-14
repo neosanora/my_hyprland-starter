@@ -1,6 +1,6 @@
 {
 	"name": "Neo Hyprland Starter",
-	"id": "Neo.hyprlandstarter",
+	"id": "com.Neo.hyprlandstarter",
 	"description": "Starter package for your Hyprland experiments",
 	"version":"1.0",
 	"author": "Neosanora",
