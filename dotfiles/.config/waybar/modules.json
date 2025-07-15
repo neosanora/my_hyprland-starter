@@ -90,6 +90,17 @@
         "on-click": "alacritty -e htop"
     },
 
+    // GPU
+    "GPU": {
+        "format": "/ G {usage}% ",
+        "on-click": "alacritty -e htop",
+        "format-icons": {
+            "default": ""
+        },
+        "interval": 5,
+        "gpu": 0 // Change this to the GPU index if you have multiple GPUs
+    },
+
     // Memory
     "memory": {
         "format": "/ M {}% ",
@@ -120,6 +131,7 @@
             "custom/system",
             "disk",
             "cpu",
+            "GPU",
             "memory",
             "hyprland/language"
         ]
