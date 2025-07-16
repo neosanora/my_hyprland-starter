@@ -41,7 +41,7 @@
     "custom/appmenu": {
         "format": "Apps",
         "tooltip-format": "Left: Open the application launcher\nRight: Show all keybindings",
-        "on-click": "on-click": "bash -c 'XDG_CURRENT_DESKTOP=Hyprland rofi -show drun -replace'",
+        "on-click": "bash -c 'XDG_CURRENT_DESKTOP=Hyprland rofi -show drun -replace'",
         "on-click-right": "bash ~/.config/ml4w/scripts/keybindings.sh",
         "tooltip": false
     },
