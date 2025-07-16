@@ -30,8 +30,6 @@
       "persistent-workspaces": {
         "*": 5
       }
-    }，
-       
     },
 
     // Hyprland Window
