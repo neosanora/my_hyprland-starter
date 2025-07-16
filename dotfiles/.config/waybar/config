@@ -24,7 +24,7 @@
         "pulseaudio", 
         "network", 
         "cpu", 
-        "GPU", 
+        "custom/gpu", 
         "memory", 
         "keyboard-state", 
         "battery", 
