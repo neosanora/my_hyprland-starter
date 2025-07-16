@@ -87,7 +87,7 @@
     // CPU
     "cpu": {
         "format": "/ C {usage}% ",
-        "on-click": "alacritty -e htop"
+        "on-click": "bash alacritty -e htop"
     },
 
     // GPU: autodetect AMD/NVIDIA
@@ -95,13 +95,13 @@
         "interval": 5,
         "format": " {}",
         "exec": "bash ~/.config/waybar/scripts/gpu_nvtop.sh",
-        "on-click": "alacritty -e nvtop"
+        "on-click": "bash alacritty -e nvtop"
     },
 
     // Memory
     "memory": {
         "format": "/ M {}% ",
-        "on-click": "alacritty -e htop"
+        "on-click": "bash alacritty -e htop"
     },
 
     // Harddisc space used
@@ -109,7 +109,7 @@
         "interval": 30,
         "format": "D {percentage_used}% ",
         "path": "/",
-        "on-click": "alacritty -e htop"
+        "on-click": "bash alacritty -e htop"
     }, 
 
     "hyprland/language": {
@@ -183,7 +183,7 @@
             "car": "",
             "default": ["", " ", " "]
         },
-        "on-click": "pavucontrol"
+        "on-click": "bash pavucontrol"
     },
 
     // Bluetooth
@@ -191,7 +191,7 @@
         "format-disabled": "",
         "format-off": "",
         "interval": 30,
-        "on-click": "blueman-manager",
+        "on-click": "bash blueman-manager",
         "format-no-controller": ""
     },
 
