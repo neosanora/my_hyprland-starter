@@ -21,6 +21,7 @@ packages=(
     "firefox"
     "ttf-font-awesome"
     "vim"
+    "nvtop"
     "fastfetch"
     "ttf-fira-sans" 
     "ttf-fira-code" 
