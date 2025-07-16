@@ -335,7 +335,7 @@ window#waybar.empty #window {
  * Hardware Group
  * ----------------------------------------------------- */
 
-#disk,#memory,#cpu,#GPU,#language {
+#disk,#memory,#cpu,#custom-gpu,#language {
     margin:0px 10px 0px 0px;
     padding:0px;
     font-size:16px;
