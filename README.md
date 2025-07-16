@@ -26,7 +26,7 @@ https://raw.githubusercontent.com/neosanora/my_hyprland-starter/master/hyprland-
 
 **1**. if you wonted to install it with old fasion way (manualy) not recomended!.
 
-    Just copy the following command into your terminal and execute.
+Just copy the following command into your terminal and execute.
 
 ```
 bash <(curl -s https://raw.githubusercontent.com/neosanora/my_hyprland-starter/master/setup.sh)
