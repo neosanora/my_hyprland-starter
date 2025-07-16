@@ -90,15 +90,12 @@
         "on-click": "alacritty -e htop"
     },
 
-    // GPU
-    "GPU": {
-        "format": "/ G {usage}% ",
-        "on-click": "alacritty -e htop",
-        "format-icons": {
-            "default": ""
-        },
+    // GPU: autodetect AMD/NVIDIA
+    "custom/gpu": {
         "interval": 5,
-        "gpu": 0 // Change this to the GPU index if you have multiple GPUs
+        "format": " {}",
+        "exec": "bash ~/.config/waybar/scripts/gpu_nvtop.sh",
+        "on-click": "alacritty -e nvtop"
     },
 
     // Memory
