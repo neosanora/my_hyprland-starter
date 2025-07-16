@@ -29,7 +29,6 @@ packages=(
     "jq"
     "brightnessctl"
     "networkmanager"
-    "blueman-manager"
     "pavucontrol"
     "wireplumber"
     "wlogout"
