@@ -60,11 +60,31 @@
 		{
 			"type":"text",
 			"mode":"overwritefile",
+			"title":"Default Terminal Emulator",
+			"file":".config/ml4w/settings/terminalemulator.sh",
+			"checkpoint":"Check",
+			"search":"",
+			"value":"kitty",
+			"template":""
+		},
+		{
+			"type":"text",
+			"mode":"overwritefile",
 			"title":"Default Browser",
 			"file":".config/ml4w/settings/browser.sh",
 			"checkpoint":"Check",
 			"search":"",
 			"value":"firefox",
+			"template":""
+		},
+		{
+			"type":"text",
+			"mode":"overwritefile",
+			"title":"Default filemanager",
+			"file":".config/ml4w/settings/filemanager.sh",
+			"checkpoint":"Check",
+			"search":"",
+			"value":"thunar",
 			"template":""
 		}
 	]
