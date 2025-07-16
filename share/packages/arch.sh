@@ -25,7 +25,8 @@ packages=(
   "qt6-wayland"
 
   # === Aplikasi GUI & System ===
-  "kitty"           # terminal
+  "kitty"           # Default terminal emulator
+  "alacritty"       # GPU-accelerated terminal emulator
   "thunar"          # file manager
   "firefox"         # browser
   "pavucontrol"     # audio control
