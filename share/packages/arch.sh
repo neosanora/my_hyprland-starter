@@ -9,6 +9,7 @@ packages=(
   "git"
   "jq"
   "vim"
+  "neovim"
   "gum"
   "fastfetch"
 
