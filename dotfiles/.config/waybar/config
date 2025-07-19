@@ -13,11 +13,11 @@
     ],    
     "modules-left": [
         "custom/appmenu",
-        "hyprland/workspaces",
-        "group/quicklinks"
+        "group/quicklinks",
+        "hyprland/window"
     ],
     "modules-center": [
-        "hyprland/window"
+        "hyprland/workspaces"
     ],
     "modules-right": [
         "mpd", 
