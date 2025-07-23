@@ -81,7 +81,7 @@ if [[ $(_checkCommandExists "pacman") == 0 ]]; then
     if [[ $(systemd-detect-virt) == "oracle" ]]; then
         $SCRIPT_DIR/VBox-setup-arch.sh
     else
-        $SCRIPT_DIR/setup-arch.sh
+        bash "$SCRIPT_DIR/setup-arch.sh"
     fi
 elif [[ $(_checkCommandExists "dnf") == 0 ]]; then
     $SCRIPT_DIR/setup-fedora.sh
