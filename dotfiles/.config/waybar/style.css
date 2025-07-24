@@ -59,8 +59,8 @@ window#waybar {
     margin: 3px 2px;
     border-radius: 999px;
     min-width: 28px;
-    height: 28px;
-    text-align: center;
+    min-height: 28px;
+    /* text-align: center; */
     color: @textcolor1;
     background-color: @workspacesbackground2;
     transition:

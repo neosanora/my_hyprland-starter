@@ -35,8 +35,7 @@ EOF
     echo ":: Distribution could not be auto detected. Please select your base distribution."
     echo 
     echo "1: Arch (pacman + aur helper)"
-    echo "2: VBox for Arch (pacman + aur helper)"
-    echo "3: Fedora (dnf)"
+    echo "2: Fedora (dnf)"
     echo "4: OpenSuse (zypper)"
     echo "5: Show dependencies and install manually for your distribution"
     echo "6: Cancel"
@@ -49,10 +48,6 @@ EOF
                 break
                 ;;
             2)
-                $SCRIPT_DIR/VBox-setup-arch.sh
-                break
-                ;;
-            3)
                 $SCRIPT_DIR/setup-fedora.sh
                 break
                 ;;
@@ -77,12 +72,7 @@ EOF
     }
 
 if [[ $(_checkCommandExists "pacman") == 0 ]]; then
-    # Deteksi VBox dengan environment variable atau file VBox
-    if [[ $(systemd-detect-virt) == "oracle" ]]; then
-        $SCRIPT_DIR/VBox-setup-arch.sh
-    else
-        bash "$SCRIPT_DIR/setup-arch.sh"
-    fi
+    bash "$SCRIPT_DIR/setup-arch.sh"
 elif [[ $(_checkCommandExists "dnf") == 0 ]]; then
     $SCRIPT_DIR/setup-fedora.sh
 elif [[ $(_checkCommandExists "zypper") == 0 ]]; then
