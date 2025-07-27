@@ -183,3 +183,4 @@ fi
 echo
 echo ":: Installation complete."
 echo ":: Ready to install the dotfiles with the Dotfiles Installer."
+echo ":: IF NOT, INSTALL GIT FIRST AND THEN RUN THE CRIPT AGAIN."
