@@ -9,9 +9,9 @@
 // ----------------------------------------------------- 
 //
 {
-    //$$$$$$$$$$$//
-    //Workspaces//
-    //$$$$$$$$$$$//
+    //$$$$$$$$$$$$//
+    // Workspaces //
+    //$$$$$$$$$$$$//
     "hyprland/workspaces": {
       "on-click": "activate",
       "active-only": false,
@@ -29,9 +29,9 @@
       }
     },
 
-    //$$$$$$$$$$$$$$$//
-    //Hyprland Window//
-    //$$$$$$$$$$$$$$$//
+    //$$$$$$$$$$$$$$$$$//
+    // Hyprland Window //
+    //$$$$$$$$$$$$$$$$$//
     "hyprland/window": {
         "rewrite": {
             "(.*) - Brave": "$1",
@@ -43,7 +43,9 @@
         "separate-outputs": true
     },
 
-    // Rofi Application Launcher
+    //$$$$$$$$$$$$$$$$$$$$$$$$$$$//
+    // Rofi Application Launcher //
+    //$$$$$$$$$$$$$$$$$$$$$$$$$$$//
     "custom/appmenu": {
         "format": "Apps",
         "tooltip-format": "Left: Open the application launcher\nRight: Show all keybindings",
@@ -51,8 +53,9 @@
         "on-click-right": "bash ~/.config/ml4w/scripts/keybindings.sh",
         "tooltip": false
     },
-    
-    // Power Menu
+    //$$$$$$$$$$$$//
+    // Power Menu //
+    //$$$$$$$$$$$$//
     "custom/exit": {
         "format": "",
         "tooltip-format": "Powermenu",
@@ -60,7 +63,9 @@
         "tooltip": false
     },
 
-    // Keyboard State
+    //$$$$$$$$$$$$$$$$//
+    // Keyboard State //
+    //$$$$$$$$$$$$$$$$//
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -71,32 +76,42 @@
         }
     },
 
-    // System tray
+    //$$$$$$$$$$$$$//
+    // System tray //
+    //$$$$$$$$$$$$$//
     "tray": {
         // "icon-size": 21,
         "spacing": 10
     },
 
-    // Clock
+    //$$$$$$$//
+    // Clock //
+    //$$$$$$$//
     "clock": {
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
 
-    // System
+    //$$$$$$$$//
+    // System //
+    //$$$$$$$$//
     "custom/system": {
         "format": "",
         "tooltip": false
     },
 
-    // CPU
+    //$$$$$//
+    // CPU //
+    //$$$$$//
     "cpu": {
         "format": "/ C {usage}% ",
         "on-click": "alacritty -e htop"
     },
-
-    // GPU: autodetect AMD/NVIDIA
+    
+    //$$$$$$$$$$$$$$$$$$$$$$$$$$$$//
+    // GPU: autodetect AMD/NVIDIA //
+    //$$$$$$$$$$$$$$$$$$$$$$$$$$$$//
     "custom/gpu": {
         "interval": 5,
         "format": " {}",
@@ -104,13 +119,17 @@
         "on-click": "alacritty -e nvtop"
     },
 
-    // Memory
+    //$$$$$$$$//
+    // Memory //
+    //$$$$$$$$//
     "memory": {
         "format": "/ M {}% ",
         "on-click": "alacritty -e htop"
     },
 
-    // Harddisc space used
+    //$$$$$$$$$$$$$$$$$$$$$//
+    // Harddisc space used //
+    //$$$$$$$$$$$$$$$$$$$$$//
     "disk": {
         "interval": 30,
         "format": "D {percentage_used}% ",
@@ -122,7 +141,9 @@
         "format": "/ K {short}"
     },
 
-    // Group Hardware
+    //$$$$$$$$$$$$$$$$//
+    // Group Hardware //
+    //$$$$$$$$$$$$$$$$//
     "group/hardware": {
         "orientation": "inherit",
         "drawer": {
@@ -140,7 +161,9 @@
         ]
     },
     
-  // Network
+  //$$$$$$$$$//
+  // Network //
+  //$$$$$$$$$//
   "network": {
     "format": "{ifname}",
     "format-wifi": " {essid} ({signalStrength}%)",
@@ -155,7 +178,9 @@
     "on-click-right": "bash ~/.config/ml4w/scripts/nm-applet.sh toggle",
   },
 
-    // Battery
+    //$$$$$$$$$//
+    // Battery //
+    //$$$$$$$$$//
     "battery": {
         "states": {
             // "good": 95,
@@ -171,7 +196,9 @@
         "format-icons": [" ", " ", " ", " ", " "]
     },
 
-    // Pulseaudio
+    //$$$$$$$$$$$$//
+    // Pulseaudio //
+    //$$$$$$$$$$$$//
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{icon}  {volume}%",
@@ -192,7 +219,9 @@
         "on-click": "pavucontrol"
     },
 
-    // Bluetooth
+    //$$$$$$$$$$$//
+    // Bluetooth //
+    //$$$$$$$$$$$//
     "bluetooth": {
         "format-disabled": "",
         "format-off": "",
@@ -201,14 +230,18 @@
         "format-no-controller": ""
     },
 
-    // Other
+    //$$$$$$$//
+    // Other //
+    //$$$$$$$//
     "user": {
         "format": "{user}",
         "interval": 60,
         "icon": false,
     },
 
-    // Idle Inhibator
+    //$$$$$$$$$$$$$$$$//
+    // Idle Inhibator //
+    //$$$$$$$$$$$$$$$$//
     "idle_inhibitor": {
         "format": "{icon}",
         "tooltip": true,
