@@ -9,7 +9,9 @@
 // ----------------------------------------------------- 
 //
 {
-    // Workspaces
+    //$$$$$$$$$$$//
+    //Workspaces//
+    //$$$$$$$$$$$//
     "hyprland/workspaces": {
       "on-click": "activate",
       "active-only": false,
@@ -27,7 +29,9 @@
       }
     },
 
-    // Hyprland Window
+    //$$$$$$$$$$$$$$$//
+    //Hyprland Window//
+    //$$$$$$$$$$$$$$$//
     "hyprland/window": {
         "rewrite": {
             "(.*) - Brave": "$1",
