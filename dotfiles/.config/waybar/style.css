@@ -65,25 +65,25 @@ window#waybar {
     background-color: @workspacesbackground2;
     transition:
         background-color 0.2s ease,
-        transform 0.2s ease,
+        /*transform 0.2s ease, */
         opacity 0.2s ease;
     opacity: 0.5;
 }
 
 #workspaces button:hover {
     background-color: @workspacesbackground2;
-    transform: scale(1.15);
+    /*transform: scale(1.15); */
     opacity: 0.8;
 }
 
 #workspaces button.active {
     background-color: @workspacesbackground2;
-    transform: scale(1.25);
+    /*transform: scale(1.25); */
     opacity: 1.0;
     border-radius: 999px;
     transition:
         background-color 0.2s ease,
-        transform 0.2s ease,
+        /*transform 0.2s ease, */
         opacity 0.2s ease;
 }
 
