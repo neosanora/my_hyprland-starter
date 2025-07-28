@@ -50,7 +50,7 @@ _isInstalled() {
 }
 
 _installYay() {
-    _installPackages "base-devel" "git"
+    _installPackages "base-devel"
     SCRIPT=$(realpath "$0")
     temp_path=$(dirname "$SCRIPT")
     git clone https://aur.archlinux.org/yay.git "$download_folder/yay"
@@ -65,16 +65,42 @@ _installPackages() {
     for pkg; do
         if [[ $(_isInstalled "${pkg}") == 0 ]]; then
             echo ":: ${pkg} is already installed."
-        else
-            toInstall+=("${pkg}")
+            continue
         fi
+        toInstall+=("${pkg}")
     done
+
     if [[ "${#toInstall[@]}" -eq 0 ]]; then
         return
     fi
-    printf "🔧 Menginstall package berikut:\n%s\n" "${toInstall[@]}"
-    yay --noconfirm -S "${toInstall[@]}"
+
+    echo "🔧 Menginstall package berikut:"
+    printf "%s\n" "${toInstall[@]}"
+
+    if [[ $(_checkCommandExists "yay") == 0 ]]; then
+        yay --noconfirm -S "${toInstall[@]}"
+    else
+        # Gunakan pacman untuk package dasar jika yay belum ada
+        sudo pacman -S --needed --noconfirm "${toInstall[@]}"
+    fi
 }
+
+
+# _installPackages() {
+#     toInstall=()
+#     for pkg; do
+#         if [[ $(_isInstalled "${pkg}") == 0 ]]; then
+#             echo ":: ${pkg} is already installed."
+#         else
+#             toInstall+=("${pkg}")
+#         fi
+#     done
+#     if [[ "${#toInstall[@]}" -eq 0 ]]; then
+#         return
+#     fi
+#     printf "🔧 Menginstall package berikut:\n%s\n" "${toInstall[@]}"
+#     yay --noconfirm -S "${toInstall[@]}"
+# }
 
 # ----------------------------------------------------------
 # Header
