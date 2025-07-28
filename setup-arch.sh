@@ -5,7 +5,20 @@
 # ----------------------------------------------------------
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-source $SCRIPT_DIR/share/packages/arch.sh
+source "$SCRIPT_DIR/share/packages/arch.sh"
+
+# Source AUR package list
+AUR_PKG_FILE="$SCRIPT_DIR/share/packages/aur-package.sh"
+if [[ -f "$AUR_PKG_FILE" ]]; then
+    source "$AUR_PKG_FILE"
+else
+    echo ":: WARNING: File aur-package.sh tidak ditemukan. Lewati AUR tambahan."
+    aur_packages=()
+fi
+
+# Download folder untuk yay
+download_folder="$SCRIPT_DIR/tmp"
+mkdir -p "$download_folder"
 
 # ----------------------------------------------------------
 # Colors
@@ -15,7 +28,7 @@ GREEN='\033[0;32m'
 NONE='\033[0m'
 
 # ----------------------------------------------------------
-# Check if command exists
+# Utils
 # ----------------------------------------------------------
 
 _checkCommandExists() {
@@ -25,58 +38,41 @@ _checkCommandExists() {
         return
     fi
     echo 0
-    return
 }
-
-# ----------------------------------------------------------
-# Check if package is already installed
-# ----------------------------------------------------------
 
 _isInstalled() {
     package="$1"
-    check="$(sudo pacman -Qs --color always "${package}" | grep "local" | grep "${package} ")"
-    if [ -n "${check}" ]; then
+    if pacman -Qq "${package}" &>/dev/null; then
         echo 0
-        return #true
+    else
+        echo 1
     fi
-    echo 1
-    return #false
 }
-
-# ----------------------------------------------------------
-# Install yay
-# ----------------------------------------------------------
 
 _installYay() {
     _installPackages "base-devel"
     SCRIPT=$(realpath "$0")
     temp_path=$(dirname "$SCRIPT")
-    git clone https://aur.archlinux.org/yay.git $download_folder/yay
-    cd $download_folder/yay
-    makepkg -si
-    cd $temp_path
+    git clone https://aur.archlinux.org/yay.git "$download_folder/yay"
+    cd "$download_folder/yay" || exit
+    makepkg --noconfirm -si
+    cd "$temp_path" || exit
     echo ":: yay has been installed successfully."
 }
-
-# ----------------------------------------------------------
-# Install packages
-# ----------------------------------------------------------
 
 _installPackages() {
     toInstall=()
     for pkg; do
         if [[ $(_isInstalled "${pkg}") == 0 ]]; then
             echo ":: ${pkg} is already installed."
-            continue
+        else
+            toInstall+=("${pkg}")
         fi
-        toInstall+=("${pkg}")
     done
-    if [[ "${toInstall[@]}" == "" ]]; then
+    if [[ "${#toInstall[@]}" -eq 0 ]]; then
         return
     fi
-    if [[ ! ${toInstall[@]} == "cargo" ]]; then
-        printf "Package not installed:\n%s\n" "${toInstall[@]}"
-    fi
+    printf "🔧 Menginstall package berikut:\n%s\n" "${toInstall[@]}"
     yay --noconfirm -S "${toInstall[@]}"
 }
 
@@ -93,55 +89,71 @@ cat <<"EOF"
 /___/\__/\__/\_,_/ .__/
                 /_/    
 ML4W Hyprland Starter for Arch based distros
-
 EOF
 echo -e "${NONE}"
 
 # ----------------------------------------------------------
-# Content
+# Prompt
 # ----------------------------------------------------------
 
-while true; do
-    read -p "DO YOU WANT TO START THE PACKAGE INSTALLATION NOW? (Yy/Nn): " yn
-    case $yn in
-        [Yy]*)
-            echo ":: Installation started."
-            echo
-            break
-            ;;
-        [Nn]*)
-            echo ":: Installation canceled"
-            exit
-            break
-            ;;
-        *)
-            echo ":: Please answer yes or no."
-            ;;
-    esac
-done
+AUTO_YES=0
+if [[ "$1" == "--yes" ]]; then
+    AUTO_YES=1
+fi
 
-# Install yay if needed
+if [[ $AUTO_YES -eq 0 ]]; then
+    while true; do
+        read -rp "DO YOU WANT TO START THE PACKAGE INSTALLATION NOW? (Yy/Nn): " yn
+        case $yn in
+            [Yy]*)
+                echo ":: Installation started."
+                echo
+                break
+                ;;
+            [Nn]*)
+                echo ":: Installation canceled"
+                exit
+                ;;
+            *)
+                echo ":: Please answer yes or no."
+                ;;
+        esac
+    done
+else
+    echo ":: Auto mode enabled. Starting installation."
+fi
+
+# ----------------------------------------------------------
+# Main
+# ----------------------------------------------------------
+
+# Install yay if not found
 if [[ $(_checkCommandExists "yay") == 0 ]]; then
     echo ":: yay is already installed"
 else
-    echo ":: The installer requires yay. yay will be installed now"
+    echo ":: The installer requires yay. Installing yay now..."
     _installYay
 fi
 
-# Packages
-_installPackages "${packages[@]}"
+# Install packages from arch.sh
+if [[ ${#packages[@]} -gt 0 ]]; then
+    _installPackages "${packages[@]}"
+else
+    echo ":: WARNING: Tidak ada isi array 'packages' dari arch.sh"
+fi
 
-# Flatpaks
-
-# Hyprland Settings App
-#ml4w_app="com.ml4w.hyprlandsettings"
-#ml4w_app_repo="hyprland-settings"
-#echo ":: Installing $ml4w_app"
-#bash -c "$(curl -s #https://raw.githubusercontent.com/mylinuxforwork/$ml4w_app_repo/master/setup.sh)"
+# Install additional AUR packages
+if [[ ${#aur_packages[@]} -gt 0 ]]; then
+    echo ":: Installing additional AUR packages from aur-package.sh..."
+    _installPackages "${aur_packages[@]}"
+else
+    echo ":: No additional AUR packages to install."
+fi
 
 # ----------------------------------------------------------
-# Completed
+# Done
 # ----------------------------------------------------------
 
+echo
 echo ":: Installation complete."
 echo ":: Ready to install the dotfiles with the Dotfiles Installer."
