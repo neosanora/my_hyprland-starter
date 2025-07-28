@@ -58,7 +58,6 @@ packages=(
 packagesNew=(
   # === Tools Umum ===
   "firefox"         # Browser
-  "unzip"           # unzip files
   "git"             # version control
   "jq"              # JSON processor
   "gum"             # command line UI toolkit
@@ -110,7 +109,7 @@ packagesNew=(
 
   # === Bar, Menu, Lock ===
   "eww"             # Widget bar / status bar
-  "wofi"            # Wayland app launcher
+  "rofi"            # Wayland app launcher
   "hyprpaper"       # Wallpaper manager
   "wlogout"         # GUI logout menu
   "hyprlock"        # Lock screen Hyprland
