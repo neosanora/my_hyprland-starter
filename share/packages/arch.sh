@@ -108,8 +108,8 @@ packagesNew=(
   "pamixer"         # CLI audio mixer
 
   # === Bar, Menu, Lock ===
-  "eww"             # Widget bar / status bar
-  "rofi"            # Wayland app launcher
+  "waybar"          # Widget bar / status bar
+  "rofi-wayland"    # Wayland app launcher
   "hyprpaper"       # Wallpaper manager
   "wlogout"         # GUI logout menu
   "hyprlock"        # Lock screen Hyprland
