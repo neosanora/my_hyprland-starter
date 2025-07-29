@@ -1,1 +1,1 @@
-sudo nano /etc/resolv.conf
+true
