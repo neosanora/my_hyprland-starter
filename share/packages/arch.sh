@@ -96,4 +96,12 @@ packages=(
   ### Monitoring ###
   #////////////////#
   "nvtop"           # Monitor GPU usage (mirip htop)
+
+
+  #///////////////////#
+  # VPN | FIREWALL |  #
+  #///////////////////#
+  "nftables"        #Netfilter tables userspace tools
+
+
 )
