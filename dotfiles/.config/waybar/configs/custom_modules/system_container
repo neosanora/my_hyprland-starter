@@ -49,7 +49,7 @@
     "custom/pacman-update#text": {
         "format": "<b>{}</b>",
         "interval": 60,
-        "exec": "~/.config/waybar/scripts/pacman-update-icon.sh",
+        "exec": "bash ~/.config/waybar/scripts/pacman-update-icon.sh",
         "tooltip": false,
         "return-type": "json"
     },
