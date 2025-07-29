@@ -1,0 +1,6 @@
+"custom/system-mode": {
+  "interval": 3,
+  "exec": " bash ~/.config/waybar/scripts/firewall/system-mode.sh",
+  "tooltip": "true",
+  "on-click": "bash ~/.config/waybar/scripts/toggle-mode.sh"
+}
