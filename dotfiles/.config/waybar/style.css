@@ -71,19 +71,23 @@ window#waybar {
 }
 
 #workspaces button:hover {
+    color: @textcolor1;
     background-color: @workspacesbackground2;
     /*transform: scale(1.15); */
     opacity: 0.8;
 }
 
 #workspaces button.active {
+    color: @textcolor1;
     background-color: @workspacesbackground2;
+    min-width: 50px;
     /*transform: scale(1.25); */
     opacity: 1.0;
     border-radius: 999px;
     transition:
         background-color 0.2s ease,
         /*transform 0.2s ease, */
+        0.5s linear,
         opacity 0.2s ease;
 }
 
