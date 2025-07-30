@@ -104,4 +104,8 @@ packages=(
   "nftables"        #Netfilter tables userspace tools
 
 
+  #///////////////////#
+  # VPN | FIREWALL |  #
+  #///////////////////#
+  "ntfs-3g"         #NTFS filesystem driver and utilities
 )
