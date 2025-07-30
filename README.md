@@ -24,13 +24,21 @@ https://raw.githubusercontent.com/neosanora/my_hyprland-starter/master/hyprland-
 ```
 
 
-**1**. if you wonted to install it with old fasion way (manualy) not recomended!.
+**0.1**. ...MANUAL... if you wonted to install it with old fasion way (manualy) not recomended!.
 
 Just copy the following command into your terminal and execute.
 
 ```
 bash <(curl -s https://raw.githubusercontent.com/neosanora/my_hyprland-starter/master/setup.sh)
 ```
+
+**0.2** ...MANUAL... step 2 clone the Dotfile using git
+
+```
+git clone https://github.com/neosanora/my_hyprland-starter
+```
+
+**0.3** ...MANUAL... copy the all folder inside dotfile/.config/ to ~/.config
 
 
 
