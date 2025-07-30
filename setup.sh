@@ -72,9 +72,9 @@ EOF
     }
 
 if [[ $(_checkCommandExists "pacman") == 0 ]]; then
-    bash "$SCRIPT_DIR/setup-arch.sh"
+    "$SCRIPT_DIR/setup-arch.sh"
 elif [[ $(_checkCommandExists "dnf") == 0 ]]; then
-    bash "$SCRIPT_DIR/setup-fedora.sh"
+    "$SCRIPT_DIR/setup-fedora.sh"
 elif [[ $(_checkCommandExists "zypper") == 0 ]]; then
     $SCRIPT_DIR/setup-opensuse.sh
 else
