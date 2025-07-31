@@ -100,14 +100,20 @@ packages=(
   "nvtop"           # Monitor GPU usage (mirip htop)
 
 
-  #////////////////////#
-  # | VPN | FIREWALL | #
-  #////////////////////#
+  #////////////////////////#
+  ### | VPN | FIREWALL | ###
+  #////////////////////////#
   "nftables"        #Netfilter tables userspace tools
 
 
   #///////////////////#
-  #     | DRIVER |    #
+  ###   | DRIVER |  ###
   #///////////////////#
   "ntfs-3g"         #NTFS filesystem driver and utilities
+
+  # Bluetooth
+  "bluez"
+  "bluez-utils"
+  "blueman"
+
 )
