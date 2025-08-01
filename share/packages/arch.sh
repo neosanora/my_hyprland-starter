@@ -57,7 +57,7 @@ packages=(
   #////////////////////////////////#
   ### | Aplikasi | GUI | System |###
   #////////////////////////////////#
-  
+  "libnotify"       # Library for sending desktop notifications
   "polkit-gnome"    # Legacy polkit authentication agent for GNOME
   "dunst"           # Sistem notifikasi ringan
   "brightnessctl"   # Kontrol kecerahan
