@@ -59,6 +59,7 @@ packages=(
   #////////////////////////////////#
   "pavucontrol"     # GUI audio control
   "qjackctl"        # GUI control untuk JACK server
+  "polkit-gnome"    # Legacy polkit authentication agent for GNOME
   "dunst"           # Sistem notifikasi ringan
   "brightnessctl"   # Kontrol kecerahan
 
