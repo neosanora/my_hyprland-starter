@@ -57,8 +57,7 @@ packages=(
   #////////////////////////////////#
   ### | Aplikasi | GUI | System |###
   #////////////////////////////////#
-  "pavucontrol"     # GUI audio control
-  "qjackctl"        # GUI control untuk JACK server
+  
   "polkit-gnome"    # Legacy polkit authentication agent for GNOME
   "dunst"           # Sistem notifikasi ringan
   "brightnessctl"   # Kontrol kecerahan
@@ -78,6 +77,8 @@ packages=(
   "pipewire-pulse"  # PulseAudio replacement via PipeWire
   "wireplumber"     # Session manager PipeWire
   "pamixer"         # CLI audio mixer
+  "pavucontrol"     # PulseAudio Volume Control
+  "qjackctl"        # A Qt front-end for the JACK low-latency audio server
 
   #///////////////////////////#
   ### | Bar | Menu | Lock | ###
