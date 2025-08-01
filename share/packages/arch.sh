@@ -103,7 +103,8 @@ packages=(
   #////////////////////////#
   ### | VPN | FIREWALL | ###
   #////////////////////////#
-  "nftables"        #Netfilter tables userspace tools
+  "nftables"                #Netfilter tables userspace tools
+  "proton-vpn-gtk-app"      #ProtonVPN GTK app, Maintained by Community
 
 
   #///////////////////#
