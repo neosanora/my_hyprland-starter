@@ -102,6 +102,7 @@ packages=(
   #////////////////////#
   ### | Monitoring | ###
   #////////////////////#
+  "btop"
   "nvtop"           # Monitor GPU usage (mirip htop)
 
 
