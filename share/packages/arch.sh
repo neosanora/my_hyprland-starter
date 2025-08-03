@@ -62,7 +62,7 @@ packages=(
   #////////////////////////////////#
   "libnotify"       # Library for sending desktop notifications
   "polkit-gnome"    # Legacy polkit authentication agent for GNOME
-  "dunst"           # Sistem notifikasi ringan
+  "swaync"          # A simple GTK based notification daemon for Sway
   "brightnessctl"   # Kontrol kecerahan
 
   #/////////////////#
