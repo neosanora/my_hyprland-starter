@@ -35,10 +35,13 @@ packages=(
   ### | Font | ###
   #//////////////#
   "font-manager"        #A simple font management application for GTK+ Desktop Environments
+  
   "ttf-font-awesome"
   "ttf-fira-sans"
   "ttf-fira-code"
   "ttf-firacode-nerd"
+
+  "noto-fonts-cjk"
 
   #////////////////////////////////#
   ### | Display | Manager | WM | ###
