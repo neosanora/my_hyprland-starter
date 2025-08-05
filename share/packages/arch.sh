@@ -87,11 +87,15 @@ packages=(
   ### | Bar | Menu | Lock | ###
   #///////////////////////////#
 
-  "waybar"          # Widget bar / status bar
-  "rofi-wayland"    # Wayland app launcher
-  "hyprpaper"       # Wallpaper manager
-  "wlogout"         # GUI logout menu
-  "hyprlock"        # Lock screen Hyprland
+  "cairo-dock"                # Light eye-candy fully themable animated dock
+  "cairo-dock-plug-ins"       # Plugins for Cairo-Dock
+
+
+  "waybar"                    # Widget bar / status bar
+  "rofi-wayland"              # Wayland app launcher
+  "hyprpaper"                 # Wallpaper manager
+  "wlogout"                   # GUI logout menu
+  "hyprlock"                  # Lock screen Hyprland
 
   #////////////////////#
   ### | Screenshot | ###
