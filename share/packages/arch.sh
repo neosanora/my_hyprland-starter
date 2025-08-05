@@ -87,10 +87,8 @@ packages=(
   ### | Bar | Menu | Lock | ###
   #///////////////////////////#
 
-  "cairo-dock"                # Light eye-candy fully themable animated dock
-  "cairo-dock-plug-ins"       # Plugins for Cairo-Dock
-
-
+  "nwg-dock-hyprland"         # GTK3-based dock for Hyprland Wayland compositor
+  
   "waybar"                    # Widget bar / status bar
   "rofi-wayland"              # Wayland app launcher
   "hyprpaper"                 # Wallpaper manager
