@@ -63,7 +63,10 @@ packages=(
   "libnotify"       # Library for sending desktop notifications
   "polkit-gnome"    # Legacy polkit authentication agent for GNOME
   "swaync"          # A simple GTK based notification daemon for Sway
-  "brightnessctl"   # Kontrol kecerahan
+  
+  "ddcutil"         # Query and change Linux monitor settings using DDC/CI and USB.
+  
+  "brightnessctl"   # Lightweight brightness control tool ---(laptop)---
 
   #/////////////////#
   ### | Network | ###
