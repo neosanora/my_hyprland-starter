@@ -37,10 +37,13 @@ packages=(
   "qt6ct"           # Qt 6 Configuration Utility
   "nwg-look"        # GTK settings editor adapted to work on wlroots-based compositors
 
+# widget theme
+  "breeze-gtk"      # Breeze widget theme for GTK 2 and 3
+
+  
   #//////////////#
   ### | Font | ###
   #//////////////#
-  "font-manager"        #A simple font management application for GTK+ Desktop Environments
   
   "ttf-font-awesome"
   "ttf-fira-sans"
@@ -48,6 +51,9 @@ packages=(
   "ttf-firacode-nerd"
 
   "noto-fonts-cjk"
+  
+# FONT EDITOR/SETTINGS
+  "font-manager"        #A simple font management application for GTK+ Desktop Environments
 
   #////////////////////////////////#
   ### | Display | Manager | WM | ###
@@ -72,7 +78,7 @@ packages=(
   
   "ddcutil"         # Query and change Linux monitor settings using DDC/CI and USB.
   
-  "brightnessctl"   # Lightweight brightness control tool ---(laptop)---
+  # "brightnessctl"   # Lightweight brightness control tool ---(laptop)---
 
   #/////////////////#
   ### | Network | ###
@@ -129,7 +135,7 @@ packages=(
   #///////////////////#
   "ntfs-3g"         #NTFS filesystem driver and utilities
 
-  # Bluetooth
+# Bluetooth
   "bluez"
   "bluez-utils"
   "blueman"
