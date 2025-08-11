@@ -12,7 +12,7 @@ packages=(
   "git"             # version control
   "jq"              # JSON processor
   "gum"             # command line UI toolkit
-  "nwg-look"        # GTK settings editor adapted to work on wlroots-based compositors
+  # "nwg-look"        # GTK settings editor adapted to work on wlroots-based compositors
   "fastfetch"       # system information tool
 
   #/////////////////////#
