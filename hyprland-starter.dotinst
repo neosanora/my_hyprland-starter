@@ -8,7 +8,7 @@
 	"dependencies": "https://github.com/neosanora/my_hyprland-starter",
 	"source": "https://github.com/neosanora/my_hyprland-starter.git",
 	"subfolder": "dotfiles",
-	"setupscript":"setup.sh",
+	"setupscript":"setup/setup.sh",
 	"restore":[
 		{
 			"title":"ML4W Settings",
